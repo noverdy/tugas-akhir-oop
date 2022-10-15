@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="660.0" prefWidth="1280.0" stylesheets="@../Stylesheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.adminform.MovieForm">
+    <children>
+        <ListView fx:id="movieListView" layoutY="29.0" onKeyReleased="#movieListViewOnAction" onMouseClicked="#movieListViewOnAction" prefHeight="613.0" prefWidth="311.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <Button layoutX="374.0" layoutY="568.0" mnemonicParsing="false" onAction="#tambahMovieButtonOnAction" prefWidth="100.0" text="Tambah">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Button layoutX="532.0" layoutY="568.0" mnemonicParsing="false" onAction="#updateMovieButtonOnAction" prefWidth="100.0" text="Update">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Button layoutX="692.0" layoutY="568.0" mnemonicParsing="false" onAction="#hapusMovieButtonOnAction" prefWidth="100.0" text="Hapus">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Button layoutX="1123.0" layoutY="568.0" mnemonicParsing="false" onAction="#resetMovieButtonOnAction" prefWidth="100.0" text="Reset">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Label layoutX="374.0" layoutY="379.0" text="Tahun">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <Label layoutX="374.0" layoutY="199.0" text="Judul">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <Label layoutX="374.0" layoutY="259.0" text="Genre">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <Label layoutX="897.0" layoutY="199.0" text="Sinopsis">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <Label layoutX="374.0" layoutY="319.0" text="Director">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <TextField fx:id="judulTextField" layoutX="592.0" layoutY="199.0" prefHeight="26.0" prefWidth="260.0" promptText="Judul">
+            <font>
+                <Font size="15.0" />
+            </font></TextField>
+        <ChoiceBox fx:id="genreChoiceBox" layoutX="592.0" layoutY="263.0" prefHeight="26.0" prefWidth="260.0" />
+        <TextField fx:id="directorTextField" layoutX="592.0" layoutY="319.0" prefHeight="26.0" prefWidth="260.0" promptText="Director">
+            <font>
+                <Font size="15.0" />
+            </font></TextField>
+        <TextField fx:id="tahunTextField" layoutX="592.0" layoutY="379.0" prefHeight="26.0" prefWidth="260.0" promptText="Tahun">
+            <font>
+                <Font size="15.0" />
+            </font></TextField>
+        <TextArea fx:id="sinopsisTextArea" layoutX="897.0" layoutY="263.0" prefHeight="146.0" prefWidth="326.0" promptText="Sinopsis" wrapText="true">
+            <font>
+                <Font size="15.0" />
+            </font></TextArea>
+        <Label layoutX="374.0" layoutY="57.0" text="Manajemen Film">
+            <font>
+                <Font size="50.0" />
+            </font>
+        </Label>
+      <Button disable="true" layoutX="839.0" layoutY="578.0" mnemonicParsing="false" onAction="#printLinkedList" opacity="0.0" text="Print Linked List" />
+    </children>
+</AnchorPane>

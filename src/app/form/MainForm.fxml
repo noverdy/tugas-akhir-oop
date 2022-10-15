@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@Stylesheet.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.MainForm">
+  <tabs>
+    <Tab disable="true" style="-fx-pref-width: 340px;" />
+
+    <Tab text="BELI TIKET">
+        <fx:include fx:id="beliTiketForm" source="mainform/BeliTiketForm.fxml" />
+    </Tab>
+    <Tab text="CEK TIKET">
+        <fx:include fx:id="cekTiketForm" source="mainform/CekTiketForm.fxml" />
+    </Tab>
+      <Tab text="LOG OUT">
+          <fx:include fx:id="logoutForm" source="mainform/LogoutForm.fxml" />
+      </Tab>
+  </tabs>
+</TabPane>

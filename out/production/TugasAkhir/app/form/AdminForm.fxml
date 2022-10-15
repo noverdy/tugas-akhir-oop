@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<TabPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@Stylesheet.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.AdminForm">
+  <tabs>
+      <Tab disable="true" style="-fx-pref-width: 240px;" />
+      <Tab text="TICKET">
+        <fx:include fx:id="ticketForm" source="adminform/TicketForm.fxml" />
+      </Tab>
+      <Tab text="SCHEDULE">
+        <fx:include fx:id="scheduleForm" source="adminform/ScheduleForm.fxml" />
+      </Tab>
+      <Tab text="MOVIE">
+        <fx:include fx:id="movieForm" source="adminform/MovieForm.fxml" />
+      </Tab>
+    <Tab text="SETTINGS">
+        <fx:include fx:id="settingsForm" source="adminform/SettingsForm.fxml" />
+    </Tab>
+  </tabs>
+</TabPane>

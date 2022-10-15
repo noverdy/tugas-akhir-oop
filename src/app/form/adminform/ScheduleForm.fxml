@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ListView?>
+
+<AnchorPane prefHeight="660.0" prefWidth="1280.0" stylesheets="@../Stylesheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.adminform.ScheduleForm">
+    <children>
+        <Label layoutX="374.0" layoutY="57.0" text="Manajemen Jadwal">
+            <font>
+                <Font size="50.0" />
+            </font>
+        </Label>
+        <ListView fx:id="scheduleListView" layoutY="29.0" onKeyReleased="#scheduleListViewOnAction" onMouseClicked="#scheduleListViewOnAction" prefHeight="660.0" prefWidth="311.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <ChoiceBox fx:id="movieChoiceBox" layoutX="618.0" layoutY="190.0" prefHeight="30.0" prefWidth="270.0" />
+        <GridPane fx:id="seatGridPane" hgap="5.0" layoutX="944.0" layoutY="160.0" vgap="5.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="30.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+            </rowConstraints>
+        </GridPane>
+        <TextField fx:id="hargaTextField" layoutX="618.0" layoutY="350.0" prefHeight="28.0" prefWidth="269.0" promptText="Harga Tiket">
+            <font>
+                <Font size="15.0" />
+            </font></TextField>
+        <DatePicker fx:id="jadwalDatePicker" layoutX="618.0" layoutY="270.0" prefHeight="28.0" prefWidth="142.0" />
+        <Spinner fx:id="hourSpinner" amountToStepBy="1" initialValue="12" layoutX="776.0" layoutY="270.0" max="23" min="0" prefHeight="29.0" prefWidth="50.0" />
+        <Spinner fx:id="minuteSpinner" amountToStepBy="1" initialValue="30" layoutX="837.0" layoutY="270.0" max="59" min="0" prefHeight="29.0" prefWidth="50.0" />
+        <Label layoutX="374.0" layoutY="190.0" text="Movie">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <Label layoutX="374.0" layoutY="270.0" text="Tanggal &amp; Waktu">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <Label layoutX="374.0" layoutY="350.0" text="Harga Tiket (Rp)">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Label>
+        <Button layoutX="374.0" layoutY="531.0" mnemonicParsing="false" onAction="#tambahScheduleButtonOnAction" prefWidth="100.0" text="Tambah">
+            <font>
+                <Font size="17.0" />
+            </font></Button>
+        <Button layoutX="488.0" layoutY="531.0" mnemonicParsing="false" onAction="#updateScheduleButtonOnAction" prefWidth="100.0" text="Update">
+            <font>
+                <Font size="17.0" />
+            </font></Button>
+        <Button layoutX="602.0" layoutY="531.0" mnemonicParsing="false" onAction="#hapusScheduleButtonOnAction" prefWidth="100.0" text="Hapus">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Button layoutX="785.0" layoutY="531.0" mnemonicParsing="false" onAction="#resetScheduleButtonOnAction" prefWidth="100.0" text="Reset">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Button>
+        <Label layoutX="975.0" layoutY="596.0" text=": Reserved" />
+        <Label layoutX="1089.0" layoutY="596.0" text=": Available" />
+        <Rectangle arcHeight="6.0" arcWidth="6.0" fill="#ea4c88" height="24.0" layoutX="944.0" layoutY="593.0" stroke="TRANSPARENT" strokeType="INSIDE" width="24.0" />
+        <Rectangle arcHeight="6.0" arcWidth="6.0" fill="#e84d88b1" height="24.0" layoutX="1058.0" layoutY="593.0" stroke="TRANSPARENT" strokeType="INSIDE" width="24.0" />
+    </children>
+</AnchorPane>

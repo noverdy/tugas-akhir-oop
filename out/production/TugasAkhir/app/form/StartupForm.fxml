@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.StartupForm">
+   <children>
+      <HBox fx:id="titleBar" alignment="CENTER_RIGHT" prefHeight="33.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label styleClass="title-label" text="XXD - Pesan Tiket Bioskop">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <Label onMouseClicked="#minimizeButtonOnClick" styleClass="minimize-button" text="⎯">
+               <padding>
+                  <Insets right="6.0" />
+               </padding></Label>
+            <Label fx:id="closeButton" onMouseClicked="#closeButtonOnClick" styleClass="close-button" text="✖" />
+         </children>
+      </HBox>
+      <Button fx:id="beliButton" layoutX="275.0" layoutY="350.0" mnemonicParsing="false" onAction="#beliButtonOnAction" prefHeight="46.0" prefWidth="250.0" text="BELI/CEK TIKET">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Button fx:id="adminButton" layoutX="275.0" layoutY="415.0" mnemonicParsing="false" onAction="#adminButtonOnAction" prefHeight="46.0" prefWidth="250.0" text="MASUK SEBAGAI ADMIN">
+         <font>
+            <Font size="16.0" />
+         </font></Button>
+      <Label alignment="CENTER" layoutX="256.0" layoutY="263.0" styleClass="header-label" text="Selamat Datang!" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="300.0" layoutY="122.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../res/logo.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
